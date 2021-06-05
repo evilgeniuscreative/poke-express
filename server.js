@@ -5,5 +5,5 @@ const PORT = 8000
 
 // set up the listener
 app.listen(PORT, () => {
-    console.log('Connected to the Porke Express on ')
+    console.log('Connected to the Poke Express on ')
 })

@@ -75,72 +75,11 @@ Create a 'pokemon.json' and 'pokemon.js' file inside the db directory.
 
 <hr>
 &#x1F534; The commit message should read: <br>
-"Commit 2 - Connected my database"
+"Connected my database"
 <hr>
-
-### Create GET Routes
-
-- create a get route `/pokemon` that will `res.send(pokemon)`, which will display your pokemon data as json in the browser.
-- create another get route `/pokemon/:index` that will return only one pokemon on that index. For example, `/pokemon/0` should display the 0 indexed pokemon.
-
-<hr>
-&#x1F534; The commit message should read: <br>
-"Commit 3 - added GET APIs"
-<hr>
-
-## Day 2
-
-### Set up your index view
-
-- Instead of displaying json at your `/pokemon` route, you should serve an `index.ejs` file that displays a list of all the pokemon. Put the pokemon inside a `<ul>` with class name `pokemon`. Use a `for` loop to display all pokemon.
-
-<hr>
-  &#x1F534; The commit message should read: <br>
-  "Commit 4 - index.ejs view rendered at pokemon route"
-<hr>
-
-<!--- Add some style to your list with a style tag, or, for an added challenge, look up how to serve static files in an express app and use a separate css file instead.
-
-- **Stretch step, not required** : Choose a google font and add it to your html and inside your `<style>` tag-->
-
-
-### Set up your show route
-
-- Inside your `server.js`, use already created get route `/pokemon/:index`
-- Update the API such that it serves a template called `show.ejs` which displays the information of a specific pokemon according to their index in the pokemon array.
-- You may want to look up how to access route parameters in express.
-
-<hr>
-   &#x1F534; The commit message should read: <br>
-   "Commit 5 - show view shows pokemon details "
-<hr>
-
-
-### Link your `index.ejs` to your `show.ejs`
- - inside your `index.ejs`,
- - for each pokemon, add an `<a>` tag that will have an `href` that goes to the route `/pokemon/x`, where x is the array position of the `pokemon` in the data array. This should be set dynamically with ejs
- - when you click the link you should go to your show route and the index number corresponding to the pokemon's array position should be displayed
-
-<hr>
-   &#x1F534; The commit message should read: <br>
-   "Commit 6 - added dynamic anchor tags to index.ejs "
-<hr>
-
-
-### Complete CRUD functionality
-
-Set up routes and templates to allow for full CRUD functionality.
-
-- Users should be able to insert a new pokemon into the array using a form on a `new.ejs` page. Creation should be handled via a POST route to the `/pokemon` route.
-- Users should be able to edit an individual pokemon on an `edit.ejs` page accessed from the  `/pokemon/:index/edit` route. The updating should be handled via a POST request to the `/pokemon/:index` route.
-- Users should be able to delete a pokemon using a button provided on the show and index pages.
-
-
-## Day 3
-
-Today you will add controller and router to the existing pokemon app to make it MVC compliant.
 
 ### Create Controller
+Now you will add controller and router to the existing pokemon app to make it MVC compliant.
 
 - Create `controllers` folder to the app
 - Add `pokemonController.js` to it
@@ -153,5 +92,57 @@ Today you will add controller and router to the existing pokemon app to make it 
 
 🔴 The commit message should read:
 "Create pokemon controller and refactor server.js"
+
+
+
+### Create the Routes
+
+- create a get route `/pokemon` that will `res.send(pokemon)`, which will display your pokemon data as json in the browser.
+- create another get route `/pokemon/:id` that will return only one pokemon on that index. For example, `/pokemon/0` should display the 0 indexed pokemon.
+- create
+
+<hr>
+&#x1F534; The commit message should read: <br>
+"Added GET APIs"
+<hr>
+
+
+
+<!--- Add some style to your list with a style tag, or, for an added challenge, look up how to serve static files in an express app and use a separate css file instead.
+
+- **Stretch step, not required** : Choose a google font and add it to your html and inside your `<style>` tag-->
+
+
+
+
+### Set up your show route
+
+- Inside your `pokemonController.js`, use already created get route `/pokemon/:index`
+- Update the API such that it serves a template called `show.hbs` which displays the information of a specific pokemon according to their index in the pokemon array.
+- You may want to look up how to access route parameters in express.
+
+<hr>
+   &#x1F534; The commit message should read: <br>
+   "Commit 5 - show view shows pokemon details "
+<hr>
+
+
+
+### Complete CRUD functionality
+
+Set up routes and templates to allow for full CRUD functionality.
+
+- Users should be able to insert a new pokemon into the database using a form on a `new.hbs` page. Creation should be handled via a POST route to the `/pokemon` route.
+- Users should be able to edit an individual pokemon on an `edit.hbs` page accessed from the `/pokemon/edit/:id` route. The updating should be handled via a PUT request to the `/pokemon/:id` route.
+- Users should be able to delete a pokemon using a button provided on the show `/pokemon/:id` pages and should be handled via a DELETE route.
+
+### Handlebars
+Use the following link to effectively use Handlebars to render the Pokemon data:
+
+[Handlebars Documentation](https://handlebarsjs.com/)
+
+
+
+
 
 
