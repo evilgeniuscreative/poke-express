@@ -99,11 +99,14 @@ Now you will add controller and router to the existing pokemon app to make it MV
 
 - create a get route `/pokemon` that will `res.send(pokemon)`, which will display your pokemon data as json in the browser.
 - create another get route `/pokemon/:id` that will return only one pokemon on that index. For example, `/pokemon/0` should display the 0 indexed pokemon.
-- create
+- for the C in CRUD, use the `create()` method to create a new Pokemon in the post route.
+- Updating a Pokemon's info using the `findOneAndUpdate()` on the `/pokemon/:id` route! Use req.body to pis the data to the model.
+- Finally, there is the D in CRUD. Create a DELETE route at `/pokemon/:id` and use the `findOneAndDelete()` method to delete a Pokemon.
+
 
 <hr>
 &#x1F534; The commit message should read: <br>
-"Added GET APIs"
+"Added CRUDability"
 <hr>
 
 
@@ -115,7 +118,7 @@ Now you will add controller and router to the existing pokemon app to make it MV
 
 
 
-### Set up your show route
+<!-- ### Set up your show route
 
 - Inside your `pokemonController.js`, use already created get route `/pokemon/:index`
 - Update the API such that it serves a template called `show.hbs` which displays the information of a specific pokemon according to their index in the pokemon array.
@@ -123,8 +126,8 @@ Now you will add controller and router to the existing pokemon app to make it MV
 
 <hr>
    &#x1F534; The commit message should read: <br>
-   "Commit 5 - show view shows pokemon details "
-<hr>
+   "Show view shows pokemon details "
+<hr> -->
 
 
 
@@ -142,6 +145,11 @@ Use the following link to effectively use Handlebars to render the Pokemon data:
 [Handlebars Documentation](https://handlebarsjs.com/)
 
 
+<hr>
+Upon completing the assignment, commit and push your work.
+&#x1F534; The commit message should read: <br>
+"Homework Completed."
+<hr>
 
 
 
