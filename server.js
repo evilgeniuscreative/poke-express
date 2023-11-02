@@ -1,20 +1,12 @@
 const express = require('express');
 const app = express();
 
-
-
-
-
 //--------------  Import CSS &/or JSON ----------------//
 app.use(express.static('public'));
 
 console.log('dirname', __dirname);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-
-
-
 
 //--------------  Server  ----------------//
 
@@ -37,7 +29,7 @@ const startServer = async () => {
 
 //--------------  Routes Middleware  ----------------//
 
-const pokemonRouter = require('./routers/pokemon.js');
+const pokemonRouter = require('./routers/pokemonRouter.js');
 
 app.use('/p', pokemonRouter);
 
