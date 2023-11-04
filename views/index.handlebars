@@ -1,0 +1,13 @@
+{{> header}}
+<main>
+  <h1>Welcome to the Pokemon Express</h1>
+  <h3>Here there be Pokemon</h3>
+
+  <div class="pokemon"> 
+     {{#each pokes}}
+    <h2>{{pokes.name}}</h2>
+    <img src="{{pokes.image}}" alt="{{pokes.name}}">
+    {{/each}}
+  </div>
+</main>
+{{> footer}}
